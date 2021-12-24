@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45FBAFE62775A8AC007C3785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFE52775A8AC007C3785 /* AppDelegate.swift */; };
+		45FBAFE82775A8AC007C3785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFE72775A8AC007C3785 /* SceneDelegate.swift */; };
+		45FBAFEA2775A8AC007C3785 /* LogeInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFE92775A8AC007C3785 /* LogeInViewController.swift */; };
+		45FBAFED2775A8AC007C3785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FBAFEB2775A8AC007C3785 /* Main.storyboard */; };
+		45FBAFEF2775A8AF007C3785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FBAFEE2775A8AF007C3785 /* Assets.xcassets */; };
+		45FBAFF22775A8AF007C3785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FBAFF02775A8AF007C3785 /* LaunchScreen.storyboard */; };
+		45FBAFFD2775A8AF007C3785 /* QuillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFFC2775A8AF007C3785 /* QuillTests.swift */; };
+		45FBB0072775A8AF007C3785 /* QuillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBB0062775A8AF007C3785 /* QuillUITests.swift */; };
+		45FBB0092775A8AF007C3785 /* QuillUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBB0082775A8AF007C3785 /* QuillUITestsLaunchTests.swift */; };
+		45FBB0162775A926007C3785 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45FBB0152775A926007C3785 /* GoogleService-Info.plist */; };
+		45FBB0192775A9BD007C3785 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 45FBB0182775A9BD007C3785 /* FirebaseAuth */; };
+		45FBB01B2775A9BD007C3785 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 45FBB01A2775A9BD007C3785 /* FirebaseFirestore */; };
+		45FBB01D2775A9BD007C3785 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 45FBB01C2775A9BD007C3785 /* FirebaseStorage */; };
+		45FBB0222775B683007C3785 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBB0212775B683007C3785 /* RegisterViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45FBAFF92775A8AF007C3785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FBAFDA2775A8AC007C3785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FBAFE12775A8AC007C3785;
+			remoteInfo = Quill;
+		};
+		45FBB0032775A8AF007C3785 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45FBAFDA2775A8AC007C3785 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45FBAFE12775A8AC007C3785;
+			remoteInfo = Quill;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45FBAFE22775A8AC007C3785 /* Quill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quill.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FBAFE52775A8AC007C3785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45FBAFE72775A8AC007C3785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		45FBAFE92775A8AC007C3785 /* LogeInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogeInViewController.swift; sourceTree = "<group>"; };
+		45FBAFEC2775A8AC007C3785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45FBAFEE2775A8AF007C3785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45FBAFF12775A8AF007C3785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45FBAFF32775A8AF007C3785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45FBAFF82775A8AF007C3785 /* QuillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FBAFFC2775A8AF007C3785 /* QuillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuillTests.swift; sourceTree = "<group>"; };
+		45FBB0022775A8AF007C3785 /* QuillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FBB0062775A8AF007C3785 /* QuillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuillUITests.swift; sourceTree = "<group>"; };
+		45FBB0082775A8AF007C3785 /* QuillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuillUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45FBB0152775A926007C3785 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45FBB0212775B683007C3785 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45FBAFDF2775A8AC007C3785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBB0192775A9BD007C3785 /* FirebaseAuth in Frameworks */,
+				45FBB01B2775A9BD007C3785 /* FirebaseFirestore in Frameworks */,
+				45FBB01D2775A9BD007C3785 /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBAFF52775A8AF007C3785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBAFFF2775A8AF007C3785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45FBAFD92775A8AC007C3785 = {
+			isa = PBXGroup;
+			children = (
+				45FBAFE42775A8AC007C3785 /* Quill */,
+				45FBAFFB2775A8AF007C3785 /* QuillTests */,
+				45FBB0052775A8AF007C3785 /* QuillUITests */,
+				45FBAFE32775A8AC007C3785 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45FBAFE32775A8AC007C3785 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45FBAFE22775A8AC007C3785 /* Quill.app */,
+				45FBAFF82775A8AF007C3785 /* QuillTests.xctest */,
+				45FBB0022775A8AF007C3785 /* QuillUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45FBAFE42775A8AC007C3785 /* Quill */ = {
+			isa = PBXGroup;
+			children = (
+				45FBB01E2775AB1F007C3785 /* Model */,
+				45FBB01F2775AB33007C3785 /* View */,
+				45FBB0202775AB4B007C3785 /* Controll */,
+				45FBAFE52775A8AC007C3785 /* AppDelegate.swift */,
+				45FBAFE72775A8AC007C3785 /* SceneDelegate.swift */,
+				45FBAFEE2775A8AF007C3785 /* Assets.xcassets */,
+				45FBAFF02775A8AF007C3785 /* LaunchScreen.storyboard */,
+				45FBAFF32775A8AF007C3785 /* Info.plist */,
+				45FBB0152775A926007C3785 /* GoogleService-Info.plist */,
+			);
+			path = Quill;
+			sourceTree = "<group>";
+		};
+		45FBAFFB2775A8AF007C3785 /* QuillTests */ = {
+			isa = PBXGroup;
+			children = (
+				45FBAFFC2775A8AF007C3785 /* QuillTests.swift */,
+			);
+			path = QuillTests;
+			sourceTree = "<group>";
+		};
+		45FBB0052775A8AF007C3785 /* QuillUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45FBB0062775A8AF007C3785 /* QuillUITests.swift */,
+				45FBB0082775A8AF007C3785 /* QuillUITestsLaunchTests.swift */,
+			);
+			path = QuillUITests;
+			sourceTree = "<group>";
+		};
+		45FBB01E2775AB1F007C3785 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45FBB01F2775AB33007C3785 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45FBAFEB2775A8AC007C3785 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45FBB0202775AB4B007C3785 /* Controll */ = {
+			isa = PBXGroup;
+			children = (
+				45FBAFE92775A8AC007C3785 /* LogeInViewController.swift */,
+				45FBB0212775B683007C3785 /* RegisterViewController.swift */,
+			);
+			path = Controll;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45FBAFE12775A8AC007C3785 /* Quill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FBB00C2775A8AF007C3785 /* Build configuration list for PBXNativeTarget "Quill" */;
+			buildPhases = (
+				45FBAFDE2775A8AC007C3785 /* Sources */,
+				45FBAFDF2775A8AC007C3785 /* Frameworks */,
+				45FBAFE02775A8AC007C3785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quill;
+			packageProductDependencies = (
+				45FBB0182775A9BD007C3785 /* FirebaseAuth */,
+				45FBB01A2775A9BD007C3785 /* FirebaseFirestore */,
+				45FBB01C2775A9BD007C3785 /* FirebaseStorage */,
+			);
+			productName = Quill;
+			productReference = 45FBAFE22775A8AC007C3785 /* Quill.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45FBAFF72775A8AF007C3785 /* QuillTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FBB00F2775A8AF007C3785 /* Build configuration list for PBXNativeTarget "QuillTests" */;
+			buildPhases = (
+				45FBAFF42775A8AF007C3785 /* Sources */,
+				45FBAFF52775A8AF007C3785 /* Frameworks */,
+				45FBAFF62775A8AF007C3785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FBAFFA2775A8AF007C3785 /* PBXTargetDependency */,
+			);
+			name = QuillTests;
+			productName = QuillTests;
+			productReference = 45FBAFF82775A8AF007C3785 /* QuillTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45FBB0012775A8AF007C3785 /* QuillUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FBB0122775A8AF007C3785 /* Build configuration list for PBXNativeTarget "QuillUITests" */;
+			buildPhases = (
+				45FBAFFE2775A8AF007C3785 /* Sources */,
+				45FBAFFF2775A8AF007C3785 /* Frameworks */,
+				45FBB0002775A8AF007C3785 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45FBB0042775A8AF007C3785 /* PBXTargetDependency */,
+			);
+			name = QuillUITests;
+			productName = QuillUITests;
+			productReference = 45FBB0022775A8AF007C3785 /* QuillUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45FBAFDA2775A8AC007C3785 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					45FBAFE12775A8AC007C3785 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					45FBAFF72775A8AF007C3785 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 45FBAFE12775A8AC007C3785;
+					};
+					45FBB0012775A8AF007C3785 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 45FBAFE12775A8AC007C3785;
+					};
+				};
+			};
+			buildConfigurationList = 45FBAFDD2775A8AC007C3785 /* Build configuration list for PBXProject "Quill" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45FBAFD92775A8AC007C3785;
+			packageReferences = (
+				45FBB0172775A9BD007C3785 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 45FBAFE32775A8AC007C3785 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45FBAFE12775A8AC007C3785 /* Quill */,
+				45FBAFF72775A8AF007C3785 /* QuillTests */,
+				45FBB0012775A8AF007C3785 /* QuillUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45FBAFE02775A8AC007C3785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBAFF22775A8AF007C3785 /* LaunchScreen.storyboard in Resources */,
+				45FBAFEF2775A8AF007C3785 /* Assets.xcassets in Resources */,
+				45FBAFED2775A8AC007C3785 /* Main.storyboard in Resources */,
+				45FBB0162775A926007C3785 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBAFF62775A8AF007C3785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBB0002775A8AF007C3785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45FBAFDE2775A8AC007C3785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBAFEA2775A8AC007C3785 /* LogeInViewController.swift in Sources */,
+				45FBAFE62775A8AC007C3785 /* AppDelegate.swift in Sources */,
+				45FBAFE82775A8AC007C3785 /* SceneDelegate.swift in Sources */,
+				45FBB0222775B683007C3785 /* RegisterViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBAFF42775A8AF007C3785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBAFFD2775A8AF007C3785 /* QuillTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBAFFE2775A8AF007C3785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBB0092775A8AF007C3785 /* QuillUITestsLaunchTests.swift in Sources */,
+				45FBB0072775A8AF007C3785 /* QuillUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45FBAFFA2775A8AF007C3785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FBAFE12775A8AC007C3785 /* Quill */;
+			targetProxy = 45FBAFF92775A8AF007C3785 /* PBXContainerItemProxy */;
+		};
+		45FBB0042775A8AF007C3785 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45FBAFE12775A8AC007C3785 /* Quill */;
+			targetProxy = 45FBB0032775A8AF007C3785 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45FBAFEB2775A8AC007C3785 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FBAFEC2775A8AC007C3785 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45FBAFF02775A8AF007C3785 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45FBAFF12775A8AF007C3785 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45FBB00A2775A8AF007C3785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45FBB00B2775A8AF007C3785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45FBB00D2775A8AF007C3785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quill/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.Quill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45FBB00E2775A8AF007C3785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quill/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.Quill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		45FBB0102775A8AF007C3785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.QuillTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quill.app/Quill";
+			};
+			name = Debug;
+		};
+		45FBB0112775A8AF007C3785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.QuillTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quill.app/Quill";
+			};
+			name = Release;
+		};
+		45FBB0132775A8AF007C3785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.QuillUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quill;
+			};
+			name = Debug;
+		};
+		45FBB0142775A8AF007C3785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZL739Q426;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tuwaiq.ios.QuillUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quill;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45FBAFDD2775A8AC007C3785 /* Build configuration list for PBXProject "Quill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FBB00A2775A8AF007C3785 /* Debug */,
+				45FBB00B2775A8AF007C3785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45FBB00C2775A8AF007C3785 /* Build configuration list for PBXNativeTarget "Quill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FBB00D2775A8AF007C3785 /* Debug */,
+				45FBB00E2775A8AF007C3785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45FBB00F2775A8AF007C3785 /* Build configuration list for PBXNativeTarget "QuillTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FBB0102775A8AF007C3785 /* Debug */,
+				45FBB0112775A8AF007C3785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45FBB0122775A8AF007C3785 /* Build configuration list for PBXNativeTarget "QuillUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FBB0132775A8AF007C3785 /* Debug */,
+				45FBB0142775A8AF007C3785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45FBB0172775A9BD007C3785 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45FBB0182775A9BD007C3785 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45FBB0172775A9BD007C3785 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		45FBB01A2775A9BD007C3785 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45FBB0172775A9BD007C3785 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		45FBB01C2775A9BD007C3785 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45FBB0172775A9BD007C3785 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 45FBAFDA2775A8AC007C3785 /* Project object */;
+}

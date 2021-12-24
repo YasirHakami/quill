@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>461594811380-oohugt5e8jco7pf7ruiv5kr77a0pah8v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.461594811380-oohugt5e8jco7pf7ruiv5kr77a0pah8v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB2v0g0aMmnp7MUZzQn5YT4HZjFcewcLz8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>461594811380</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tuwaiq.ios.Quill</string>
+	<key>PROJECT_ID</key>
+	<string>quill-afc91</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quill-afc91.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:461594811380:ios:aa01c0d4cac2538611b7a1</string>
+</dict>
+</plist>
