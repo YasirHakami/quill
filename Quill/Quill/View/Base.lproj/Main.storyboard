@@ -253,10 +253,22 @@
         <!--Home-->
         <scene sceneID="ioB-Nd-Xpo">
             <objects>
-                <viewController id="6D3-Sb-WeS" sceneMemberID="viewController">
+                <viewController id="6D3-Sb-WeS" customClass="HomeViewController" customModule="Quill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bmp-bX-1bk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0A-RP-Cad">
+                                <rect key="frame" x="299" y="89" width="70" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="handelLogOut:" destination="6D3-Sb-WeS" eventType="touchUpInside" id="Vur-GP-ebU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aTK-ij-6dG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -264,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9y-PX-XvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="1133"/>
+            <point key="canvasLocation" x="2482.608695652174" y="1132.3660714285713"/>
         </scene>
         <!--Profile-->
         <scene sceneID="7ep-UC-vbV">
@@ -321,6 +333,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
