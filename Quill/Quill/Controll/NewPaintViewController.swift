@@ -1,0 +1,177 @@
+//
+//  NewPaintViewController.swift
+//  Quill
+//
+//  Created by Yasir Hakami on 24/12/2021.
+//
+
+import Foundation
+import UIKit
+import Firebase
+
+class NewPaintViewController:UIViewController{
+    var selectedPost:Post?
+    var selectedPostImage:UIImage?
+    @IBOutlet weak var newImage: UIImageView!{
+        didSet {
+            newImage.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
+            newImage.addGestureRecognizer(tapGesture)
+        }
+    }
+    @IBOutlet weak var descripLabel: UILabel!
+    @IBOutlet weak var descripTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    @IBOutlet weak var signatureTextField: UITextField!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var contactLabel: UILabel!
+    @IBOutlet weak var SignatureLabel: UILabel!
+    @IBOutlet weak var sendButten: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let selectedPost = selectedPost,
+        let selectedImage = selectedPostImage{
+            descripTextField.text = selectedPost.price
+            priceTextField.text = selectedPost.description
+            
+            newImage.image = selectedImage
+            sendButten.setTitle("Update", for: .normal)
+            let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(handleDelete))
+            self.navigationItem.rightBarButtonItem = deleteBarButton
+        }else {
+            sendButten.setTitle("Add New Paint", for: .normal)
+            self.navigationItem.rightBarButtonItem = nil
+            
+        }
+    }
+    @objc func handleDelete (_ sender: UIBarButtonItem) {
+        let ref = Firestore.firestore().collection("posts")
+        if let selectedPost = selectedPost {
+            ref.document(selectedPost.id).delete { error in
+                if let error = error {
+                    print("Error in db delete",error)
+                }else {
+                    // Create a reference to the file to delete
+                    let storageRef = Storage.storage().reference(withPath: "posts/\(selectedPost.user.id)/\(selectedPost.id)")
+                    // Delete the file
+                    storageRef.delete { error in
+                        if let error = error {
+                            print("Error in storage delete",error)
+                        } else {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    @IBAction func handelNewQuill(_ sender: Any) {
+            if let image = newImage.image,
+               let imageData = image.jpegData(compressionQuality: 0.50),
+               let price = priceTextField.text,
+               let description = descripTextField.text,
+               let contact = contactTextField.text,
+               let signature = signatureTextField.text,
+               let currentUser = Auth.auth().currentUser {
+                
+                var postId = ""
+                if let selectedPost = selectedPost {
+                    postId = selectedPost.id
+                }else {
+                    postId = "\(Firebase.UUID())"
+                }
+                let storageRef = Storage.storage().reference(withPath: "posts/\(currentUser.uid)/\(postId)")
+                let updloadMeta = StorageMetadata.init()
+                updloadMeta.contentType = "image/png"
+                storageRef.putData(imageData, metadata: updloadMeta) { storageMeta, error in
+                    if let error = error {
+                        print("Upload error",error.localizedDescription)
+                    }
+                    storageRef.downloadURL { url, error in
+                        var postData = [String:Any]()
+                        if let url = url {
+                            let db = Firestore.firestore()
+                            let ref = db.collection("posts")
+                            if let selectedPost = self.selectedPost {
+                                postData = [
+                                    "userId":selectedPost.user.id,
+                                    "contact":contact,
+                                    "price":price,
+                                    "signature":signature,
+                                    "description":description,
+                                    "imageUrl":url.absoluteString,
+                                    "createdAt":selectedPost.createdAt ?? FieldValue.serverTimestamp(),
+                                    "updatedAt": FieldValue.serverTimestamp()
+                                ]
+                            }else {
+                                postData = [
+                                    "userId":currentUser.uid,
+                                    "contact":contact,
+                                    "signature":signature,
+                                    "price":price,
+                                    "description":description,
+                                    "imageUrl":url.absoluteString,
+                                    "createdAt":FieldValue.serverTimestamp(),
+                                    "updatedAt": FieldValue.serverTimestamp()
+                                ]
+                            }
+                            ref.document(postId).setData(postData) { error in
+                                if let error = error {
+                                    print("FireStore Error",error.localizedDescription)
+                                }
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        
+    }
+
+
+extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func chooseImage() {
+        self.showAlert()
+    }
+    private func showAlert() {
+        
+        let alert = UIAlertController(title: "Choose Profile Picture", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
+            self.getImage(fromSourceType: .camera)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Album", style: .default, handler: {(action: UIAlertAction) in
+            self.getImage(fromSourceType: .photoLibrary)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    //get image from source type
+    private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
+        
+        //Check is source type available
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = sourceType
+            self.present(imagePickerController, animated: true, completion: nil)
+        }
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        newImage.image = chosenImage
+        dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+}

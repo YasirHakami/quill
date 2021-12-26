@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45224BAC277627A500333D5D /* NewPaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45224BAB277627A500333D5D /* NewPaintViewController.swift */; };
+		45224BAE27762FC300333D5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45224BAD27762FC300333D5D /* User.swift */; };
+		45224BB02776302400333D5D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45224BAF2776302400333D5D /* Post.swift */; };
+		454E8FEA27776AB000016579 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8FE927776AB000016579 /* ImageUrl.swift */; };
+		454E8FEC27777D3200016579 /* QullCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8FEB27777D3200016579 /* QullCell.swift */; };
+		45CE67BE2778493F004101EB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE67BD2778493F004101EB /* DetailsViewController.swift */; };
+		45D083672775ECE900FBF918 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D083662775ECE900FBF918 /* ProfileViewController.swift */; };
 		45F5426A2775DF7F0040B3C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F542692775DF7F0040B3C6 /* HomeViewController.swift */; };
 		45FBAFE62775A8AC007C3785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFE52775A8AC007C3785 /* AppDelegate.swift */; };
 		45FBAFE82775A8AC007C3785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBAFE72775A8AC007C3785 /* SceneDelegate.swift */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45224BAB277627A500333D5D /* NewPaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPaintViewController.swift; sourceTree = "<group>"; };
+		45224BAD27762FC300333D5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45224BAF2776302400333D5D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		454E8FE927776AB000016579 /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
+		454E8FEB27777D3200016579 /* QullCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QullCell.swift; sourceTree = "<group>"; };
+		45CE67BD2778493F004101EB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		45D083662775ECE900FBF918 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		45F542692775DF7F0040B3C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		45FBAFE22775A8AC007C3785 /* Quill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FBAFE52775A8AC007C3785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454E8FE827776A8700016579 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				454E8FE927776AB000016579 /* ImageUrl.swift */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
 		45FBAFD92775A8AC007C3785 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +133,7 @@
 		45FBAFE42775A8AC007C3785 /* Quill */ = {
 			isa = PBXGroup;
 			children = (
+				454E8FE827776A8700016579 /* Utill */,
 				45FBB01E2775AB1F007C3785 /* Model */,
 				45FBB01F2775AB33007C3785 /* View */,
 				45FBB0202775AB4B007C3785 /* Controll */,
@@ -144,6 +167,8 @@
 		45FBB01E2775AB1F007C3785 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45224BAD27762FC300333D5D /* User.swift */,
+				45224BAF2776302400333D5D /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				45FBAFEB2775A8AC007C3785 /* Main.storyboard */,
+				454E8FEB27777D3200016579 /* QullCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,9 +185,12 @@
 		45FBB0202775AB4B007C3785 /* Controll */ = {
 			isa = PBXGroup;
 			children = (
+				45D083662775ECE900FBF918 /* ProfileViewController.swift */,
+				45224BAB277627A500333D5D /* NewPaintViewController.swift */,
 				45FBAFE92775A8AC007C3785 /* LogeInViewController.swift */,
 				45FBB0212775B683007C3785 /* RegisterViewController.swift */,
 				45F542692775DF7F0040B3C6 /* HomeViewController.swift */,
+				45CE67BD2778493F004101EB /* DetailsViewController.swift */,
 			);
 			path = Controll;
 			sourceTree = "<group>";
@@ -306,11 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45224BAC277627A500333D5D /* NewPaintViewController.swift in Sources */,
+				45D083672775ECE900FBF918 /* ProfileViewController.swift in Sources */,
 				45F5426A2775DF7F0040B3C6 /* HomeViewController.swift in Sources */,
 				45FBAFEA2775A8AC007C3785 /* LogeInViewController.swift in Sources */,
+				45224BAE27762FC300333D5D /* User.swift in Sources */,
 				45FBAFE62775A8AC007C3785 /* AppDelegate.swift in Sources */,
+				45224BB02776302400333D5D /* Post.swift in Sources */,
+				454E8FEA27776AB000016579 /* ImageUrl.swift in Sources */,
+				454E8FEC27777D3200016579 /* QullCell.swift in Sources */,
 				45FBAFE82775A8AC007C3785 /* SceneDelegate.swift in Sources */,
 				45FBB0222775B683007C3785 /* RegisterViewController.swift in Sources */,
+				45CE67BE2778493F004101EB /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
