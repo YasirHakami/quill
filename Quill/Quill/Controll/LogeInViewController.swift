@@ -32,7 +32,7 @@ class LogeInViewController: UIViewController {
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let _ = authResult {
-                    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNavigationController") as? UINavigationController {
+                    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileController") as? UITabBarController {
                         vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion: nil)
                     }

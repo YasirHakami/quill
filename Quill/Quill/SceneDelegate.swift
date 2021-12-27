@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let window = window {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let _ = Auth.auth().currentUser {
-                let navigationController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController") as! UINavigationController
+                let navigationController = storyboard.instantiateViewController(withIdentifier: "ProfileController") as! UITabBarController
                 window.rootViewController = navigationController
                 window.makeKeyAndVisible()
             }

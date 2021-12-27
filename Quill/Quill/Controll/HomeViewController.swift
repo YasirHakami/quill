@@ -133,7 +133,7 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
         return cell.cellStap(with: posts[indexPath.row])
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return 370
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! QullCell

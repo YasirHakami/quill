@@ -11,12 +11,24 @@ import Firebase
 
 class QullCell:UITableViewCell{
     @IBOutlet weak var descripLabel: UILabel!
-    @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var signuatorLabel: UILabel!
-    @IBOutlet weak var paintImage: UIImageView!
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var paintImage: UIImageView!{
+        didSet{
+            paintImage.layer.borderColor = UIColor.systemBackground.cgColor
+            paintImage.layer.borderWidth = 3.0
+        }
+    }
+    @IBOutlet weak var userImage: UIImageView!{
+        didSet {
+            userImage.layer.borderColor = UIColor.systemGray.cgColor
+            userImage.layer.borderWidth = 2.0
+            userImage.layer.cornerRadius = userImage.bounds.height / 2
+            userImage.layer.masksToBounds = true
+            userImage.isUserInteractionEnabled = true
+        }
+        
+    }
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +41,9 @@ class QullCell:UITableViewCell{
         // Configure the view for the selected state
     }
     func cellStap(with post:Post) -> UITableViewCell {
-        signuatorLabel.text = post.signature
-        contactLabel.text = post.contact
-        priceLabel.text = post.price
+        priceLabel.text = post.price + " SAR"
         descripLabel.text = post.description
         paintImage.loadImageUsingCache(with: post.imageUrl)
-        userNameLabel.text = post.user.name
         userImage.loadImageUsingCache(with: post.user.imageUrl)
         return self
     }

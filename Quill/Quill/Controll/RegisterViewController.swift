@@ -80,7 +80,7 @@ class RegisterViewController:UIViewController{
                                     if let error = error {
                                         print("Registration Database error",error.localizedDescription)
                                     }else {
-                                        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNavigationController") as? UINavigationController {
+                                        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileController") as? UITabBarController {
                                             vc.modalPresentationStyle = .fullScreen
                                             self.present(vc, animated: true, completion: nil)
                                         }
