@@ -15,7 +15,7 @@ class LogeInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var payerLabel: UILabel!
+   
     
     
     
@@ -24,7 +24,8 @@ class LogeInViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+  
+    
     @IBAction func hundelSignIn(_ sender: Any) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {

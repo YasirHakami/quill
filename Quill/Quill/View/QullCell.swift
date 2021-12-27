@@ -16,8 +16,8 @@ class QullCell:UITableViewCell{
     @IBOutlet weak var signuatorLabel: UILabel!
     @IBOutlet weak var paintImage: UIImageView!
     @IBOutlet weak var userImage: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -20,6 +20,9 @@ class HomeViewController:UIViewController{
         quillTableView.delegate = self
         getNewQuill()
         
+        
+       
+        
     }
     
     @IBAction func handelLogOut(_ sender: Any) {

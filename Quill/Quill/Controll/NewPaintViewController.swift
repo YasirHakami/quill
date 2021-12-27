@@ -12,6 +12,7 @@ import Firebase
 class NewPaintViewController:UIViewController{
     var selectedPost:Post?
     var selectedPostImage:UIImage?
+    let activityIndicator = UIActivityIndicatorView()
     @IBOutlet weak var newImage: UIImageView!{
         didSet {
             newImage.isUserInteractionEnabled = true
@@ -33,9 +34,12 @@ class NewPaintViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         if let selectedPost = selectedPost,
-        let selectedImage = selectedPostImage{
-            descripTextField.text = selectedPost.price
-            priceTextField.text = selectedPost.description
+        let selectedImage = selectedPostImage {
+            descripTextField.text = selectedPost.description
+            priceTextField.text = selectedPost.price
+            contactTextField.text = selectedPost.contact
+            signatureTextField.text = selectedPost.signature
+            
             
             newImage.image = selectedImage
             sendButten.setTitle("Update", for: .normal)
@@ -78,7 +82,7 @@ class NewPaintViewController:UIViewController{
                let contact = contactTextField.text,
                let signature = signatureTextField.text,
                let currentUser = Auth.auth().currentUser {
-                
+                Activity.showIndicator(parentView: self.view, childView: activityIndicator)
                 var postId = ""
                 if let selectedPost = selectedPost {
                     postId = selectedPost.id
@@ -124,6 +128,7 @@ class NewPaintViewController:UIViewController{
                                 if let error = error {
                                     print("FireStore Error",error.localizedDescription)
                                 }
+                                Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                                 self.navigationController?.popViewController(animated: true)
                             }
                         }
