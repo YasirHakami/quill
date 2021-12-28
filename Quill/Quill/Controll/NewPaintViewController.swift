@@ -29,6 +29,7 @@ class NewPaintViewController:UIViewController{
     @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var SignatureLabel: UILabel!
     @IBOutlet weak var sendButten: UIButton!
+   
     
     
     override func viewDidLoad() {
@@ -39,8 +40,6 @@ class NewPaintViewController:UIViewController{
             priceTextField.text = selectedPost.price
             contactTextField.text = selectedPost.contact
             signatureTextField.text = selectedPost.signature
-            
-            
             newImage.image = selectedImage
             sendButten.setTitle("Update", for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "delete.left"), style: .plain, target: self, action: #selector(handleDelete))
@@ -50,6 +49,7 @@ class NewPaintViewController:UIViewController{
             self.navigationItem.rightBarButtonItem = nil
             
         }
+       
     }
     @objc func handleDelete (_ sender: UIBarButtonItem) {
         let ref = Firestore.firestore().collection("posts")

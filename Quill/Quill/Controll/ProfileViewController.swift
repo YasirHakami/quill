@@ -14,10 +14,12 @@ class ProfileViewController:UIViewController{
     @IBOutlet weak var userProfileImage: UIImageView!{
         didSet {
             userProfileImage.layer.borderColor = UIColor.systemGray.cgColor
-            userProfileImage.layer.borderWidth = 2.0
-            userProfileImage.layer.cornerRadius = userProfileImage.bounds.height / 4
             userProfileImage.layer.masksToBounds = true
             userProfileImage.isUserInteractionEnabled = true
+            userProfileImage.layer.masksToBounds = true
+            userProfileImage.layer.cornerRadius = 7
+            userProfileImage.layer.borderColor = UIColor.systemBrown.cgColor
+            userProfileImage.layer.borderWidth = 2.0
         }
         
     }
