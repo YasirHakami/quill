@@ -14,7 +14,7 @@ class QullCell:UITableViewCell{
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var paintImage: UIImageView!{
         didSet{
-            paintImage.layer.borderColor = UIColor.systemBackground.cgColor
+            paintImage.layer.borderColor = UIColor.systemBrown.cgColor
             paintImage.layer.borderWidth = 3.0
         }
     }

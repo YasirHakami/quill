@@ -139,7 +139,7 @@
 				454E8FE827776A8700016579 /* Utill */,
 				45FBB01E2775AB1F007C3785 /* Model */,
 				45FBB01F2775AB33007C3785 /* View */,
-				45FBB0202775AB4B007C3785 /* Controll */,
+				45FBB0202775AB4B007C3785 /* Controller */,
 				45FBAFE52775A8AC007C3785 /* AppDelegate.swift */,
 				45FBAFE72775A8AC007C3785 /* SceneDelegate.swift */,
 				45FBAFEE2775A8AF007C3785 /* Assets.xcassets */,
@@ -185,7 +185,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		45FBB0202775AB4B007C3785 /* Controll */ = {
+		45FBB0202775AB4B007C3785 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				45D083662775ECE900FBF918 /* ProfileViewController.swift */,
@@ -195,7 +195,7 @@
 				45F542692775DF7F0040B3C6 /* HomeViewController.swift */,
 				45CE67BD2778493F004101EB /* DetailsViewController.swift */,
 			);
-			path = Controll;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
