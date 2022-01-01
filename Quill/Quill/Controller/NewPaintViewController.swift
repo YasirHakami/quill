@@ -44,6 +44,7 @@ class NewPaintViewController:UIViewController{
             sendButten.setTitle("Update", for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "delete.left"), style: .plain, target: self, action: #selector(handleDelete))
             self.navigationItem.rightBarButtonItem = deleteBarButton
+            
         }else {
             sendButten.setTitle("Add New Paint", for: .normal)
             self.navigationItem.rightBarButtonItem = nil
