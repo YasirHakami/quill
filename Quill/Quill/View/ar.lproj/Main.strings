@@ -1,0 +1,138 @@
+
+/* Class = "UILabel"; text = "Quill Bio"; ObjectID = "0gf-bY-3hv"; */
+"0gf-bY-3hv.text" = "Quill Bio";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Kt-uB-TwY"; */
+"4Kt-uB-TwY.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5T2-08-K8k"; */
+"5T2-08-K8k.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "اللغة العربية"; ObjectID = "84q-XQ-d5J"; */
+"84q-XQ-d5J.configuration.title" = "اللغة العربية";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "84q-XQ-d5J"; */
+"84q-XQ-d5J.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "BIO:"; ObjectID = "8b7-4V-YCP"; */
+"8b7-4V-YCP.text" = "BIO:";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "ACj-Ue-zVr"; */
+"ACj-Ue-zVr.text" = "Password:";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "BfR-KC-6Xv"; */
+"BfR-KC-6Xv.text" = "Price:";
+
+/* Class = "UILabel"; text = "Descripe it:"; ObjectID = "C0e-t0-3nq"; */
+"C0e-t0-3nq.text" = "Descripe it:";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "DuK-LX-wHP"; */
+"DuK-LX-wHP.text" = "Name:";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "G3G-c6-pRi"; */
+"G3G-c6-pRi.text" = "Price:";
+
+/* Class = "UILabel"; text = "ConfirmPassword:"; ObjectID = "Kt6-wV-gy6"; */
+"Kt6-wV-gy6.text" = "ConfirmPassword:";
+
+/* Class = "UILabel"; text = "Descrip:"; ObjectID = "MPx-p0-ujr"; */
+"MPx-p0-ujr.text" = "Descrip:";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "NYQ-UC-bVx"; */
+"NYQ-UC-bVx.text" = "Email:";
+
+/* Class = "UILabel"; text = "Signuator:"; ObjectID = "NzZ-eJ-tv3"; */
+"NzZ-eJ-tv3.text" = "Signuator:";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "Qzf-1m-Gme"; */
+"Qzf-1m-Gme.text" = "Register";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "RIJ-Zi-AP2"; */
+"RIJ-Zi-AP2.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "U2N-Bn-7us"; */
+"U2N-Bn-7us.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UpZ-aj-LyM"; */
+"UpZ-aj-LyM.text" = "Label";
+
+/* Class = "UILabel"; text = "Painter:"; ObjectID = "Yly-Xm-zeo"; */
+"Yly-Xm-zeo.text" = "Painter:";
+
+/* Class = "UITextField"; placeholder = "NOT LESS THEN 6 DIGIT"; ObjectID = "bRa-op-pBM"; */
+"bRa-op-pBM.placeholder" = "NOT LESS THEN 6 DIGIT";
+
+/* Class = "UILabel"; text = "Contact:"; ObjectID = "bVl-cC-Hfk"; */
+"bVl-cC-Hfk.text" = "Contact:";
+
+/* Class = "UILabel"; text = "Contact:"; ObjectID = "cPp-ZE-y2D"; */
+"cPp-ZE-y2D.text" = "Contact:";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "cso-Pg-dka"; */
+"cso-Pg-dka.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cso-Pg-dka"; */
+"cso-Pg-dka.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hUS-80-A4K"; */
+"hUS-80-A4K.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hux-Db-WrG"; */
+"hux-Db-WrG.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Loge In"; ObjectID = "jnH-CW-YF5"; */
+"jnH-CW-YF5.configuration.title" = "Loge In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jnH-CW-YF5"; */
+"jnH-CW-YF5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "l8x-OB-mci"; */
+"l8x-OB-mci.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "WHO ARE YOU WITHEN WORD?"; ObjectID = "lHT-Fo-UUf"; */
+"lHT-Fo-UUf.placeholder" = "WHO ARE YOU WITHEN WORD?";
+
+/* Class = "UILabel"; text = "Descrip:"; ObjectID = "ldN-iA-gUf"; */
+"ldN-iA-gUf.text" = "Descrip:";
+
+/* Class = "UILabel"; text = "Quill User Name"; ObjectID = "lhY-Wf-y8R"; */
+"lhY-Wf-y8R.text" = "Quill User Name";
+
+/* Class = "UITabBarItem"; title = "Add"; ObjectID = "m9s-Dq-43d"; */
+"m9s-Dq-43d.title" = "Add";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "mdc-jf-Mpl"; */
+"mdc-jf-Mpl.text" = "Password:";
+
+/* Class = "UILabel"; text = "Signature:"; ObjectID = "meu-Hr-auz"; */
+"meu-Hr-auz.text" = "Signature:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nZU-cp-AK3"; */
+"nZU-cp-AK3.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "pGB-lx-TH3"; */
+"pGB-lx-TH3.title" = "Profile";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "plc-jv-fIB"; */
+"plc-jv-fIB.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "plc-jv-fIB"; */
+"plc-jv-fIB.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Send New Paint"; ObjectID = "vUM-ri-h6j"; */
+"vUM-ri-h6j.configuration.title" = "Send New Paint";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vUM-ri-h6j"; */
+"vUM-ri-h6j.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "log off"; ObjectID = "w0A-RP-Cad"; */
+"w0A-RP-Cad.configuration.title" = "log off";
+
+/* Class = "UILabel"; text = "Price:"; ObjectID = "xvM-oT-RfQ"; */
+"xvM-oT-RfQ.text" = "Price:";
+
+/* Class = "UILabel"; text = "Hi There ! Nice to See You Again!"; ObjectID = "ywn-LX-Vw6"; */
+"ywn-LX-Vw6.text" = "Hi There ! Nice to See You Again!";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "zf3-dG-KSe"; */
+"zf3-dG-KSe.text" = "Email:";

@@ -20,14 +20,30 @@ class NewPaintViewController:UIViewController{
             newImage.addGestureRecognizer(tapGesture)
         }
     }
-    @IBOutlet weak var descripLabel: UILabel!
+    @IBOutlet weak var descripLabel: UILabel!{
+        didSet{
+            descripLabel.text = "descripe".localized
+        }
+    }
     @IBOutlet weak var descripTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var contactTextField: UITextField!
     @IBOutlet weak var signatureTextField: UITextField!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var contactLabel: UILabel!
-    @IBOutlet weak var SignatureLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!{
+        didSet{
+            priceLabel.text = "price".localized
+        }
+    }
+    @IBOutlet weak var contactLabel: UILabel!{
+        didSet{
+            contactLabel.text = "contact".localized
+        }
+    }
+    @IBOutlet weak var SignatureLabel: UILabel!{
+        didSet{
+            SignatureLabel.text = "signature".localized
+        }
+    }
     @IBOutlet weak var sendButten: UIButton!
    
     
@@ -41,12 +57,12 @@ class NewPaintViewController:UIViewController{
             contactTextField.text = selectedPost.contact
             signatureTextField.text = selectedPost.signature
             newImage.image = selectedImage
-            sendButten.setTitle("Update", for: .normal)
+            sendButten.setTitle("Update".localized, for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "delete.left"), style: .plain, target: self, action: #selector(handleDelete))
             self.navigationItem.rightBarButtonItem = deleteBarButton
             
         }else {
-            sendButten.setTitle("Add New Paint", for: .normal)
+            sendButten.setTitle("SendNewPaint".localized, for: .normal)
             self.navigationItem.rightBarButtonItem = nil
             
         }

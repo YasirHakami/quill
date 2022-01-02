@@ -10,7 +10,19 @@ import UIKit
 import Firebase
 
 class QullCell:UITableViewCell{
+    @IBOutlet weak var descripation: UILabel!{
+        didSet{
+            descripation.text = "descripe".localized
+        }
+    }
+    @IBOutlet weak var price: UILabel!{
+        didSet{
+            price.text = "price".localized
+        }
+    }
+    
     @IBOutlet weak var descripLabel: UILabel!
+    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var paintImage: UIImageView!{
         didSet{
@@ -33,6 +45,7 @@ class QullCell:UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -45,6 +58,7 @@ class QullCell:UITableViewCell{
         descripLabel.text = post.description
         paintImage.loadImageUsingCache(with: post.imageUrl)
         userImage.loadImageUsingCache(with: post.user.imageUrl)
+        
         return self
     }
     

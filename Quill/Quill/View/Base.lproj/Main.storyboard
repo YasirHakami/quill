@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -81,10 +82,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84q-XQ-d5J">
                                         <rect key="frame" x="0.0" y="0.0" width="108.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Payer">
+                                        <buttonConfiguration key="configuration" style="filled" title="اللغة العربية">
                                             <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                             <color key="baseBackgroundColor" name="add &amp; log out"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeLanguge:" destination="71E-hg-sXY" eventType="touchUpInside" id="xgI-XJ-pBk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cso-Pg-dka">
                                         <rect key="frame" x="246.5" y="0.0" width="108.5" height="31"/>
@@ -99,6 +103,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2N-Bn-7us">
+                                <rect key="frame" x="47" y="465" width="38" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Oja-ZC-xNh"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="eye" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changePasswordVisibility:" destination="71E-hg-sXY" eventType="touchUpInside" id="M5k-On-Axb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oJH-JK-H9T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,9 +135,11 @@
                             <constraint firstItem="mdc-jf-Mpl" firstAttribute="leading" secondItem="oJH-JK-H9T" secondAttribute="leading" constant="30" id="Q6s-rt-lPC"/>
                             <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="9p1-Ug-aiE" secondAttribute="trailing" constant="30" id="S5J-SL-AOO"/>
                             <constraint firstItem="o7c-wg-7uY" firstAttribute="top" secondItem="mdc-jf-Mpl" secondAttribute="bottom" constant="20" id="Uhb-c0-Epp"/>
+                            <constraint firstItem="U2N-Bn-7us" firstAttribute="top" secondItem="o7c-wg-7uY" secondAttribute="bottom" constant="9" id="Vuf-cv-wpD"/>
                             <constraint firstAttribute="bottom" secondItem="kae-CJ-q9n" secondAttribute="bottom" constant="-229" id="XHm-ny-Vpw"/>
                             <constraint firstItem="wgg-JX-zfn" firstAttribute="leading" secondItem="oJH-JK-H9T" secondAttribute="leading" constant="10" id="aSq-G7-Ebg"/>
                             <constraint firstItem="jnH-CW-YF5" firstAttribute="leading" secondItem="oJH-JK-H9T" secondAttribute="leading" constant="100" id="aTx-6U-PYL"/>
+                            <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="U2N-Bn-7us" secondAttribute="trailing" constant="290" id="en5-SP-F6l"/>
                             <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="mdc-jf-Mpl" secondAttribute="trailing" constant="30" id="hGU-ot-dB0"/>
                             <constraint firstItem="o7c-wg-7uY" firstAttribute="top" secondItem="mdc-jf-Mpl" secondAttribute="bottom" constant="20" id="hOE-ee-vNA"/>
                             <constraint firstItem="jnH-CW-YF5" firstAttribute="top" secondItem="o7c-wg-7uY" secondAttribute="bottom" constant="36" id="jAD-Mj-1id"/>
@@ -128,22 +148,27 @@
                             <constraint firstItem="kae-CJ-q9n" firstAttribute="leading" secondItem="oJH-JK-H9T" secondAttribute="leading" id="m5D-Wk-q4A"/>
                             <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="NYQ-UC-bVx" secondAttribute="trailing" constant="30" id="meU-86-ukS"/>
                             <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="jnH-CW-YF5" secondAttribute="trailing" constant="100" id="rLO-dy-ke2"/>
+                            <constraint firstItem="U2N-Bn-7us" firstAttribute="leading" secondItem="oJH-JK-H9T" secondAttribute="leading" constant="47" id="vh9-8E-y7o"/>
                             <constraint firstItem="oJH-JK-H9T" firstAttribute="trailing" secondItem="o7c-wg-7uY" secondAttribute="trailing" constant="100" id="wjM-KK-p4C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RoQ-EL-ark"/>
                     <connections>
+                        <outlet property="changeLangugeButten" destination="84q-XQ-d5J" id="Icu-hj-BrL"/>
                         <outlet property="emailLabel" destination="NYQ-UC-bVx" id="68e-tG-LaC"/>
                         <outlet property="emailTextField" destination="Hee-6x-jgE" id="Ztg-Rm-3M9"/>
+                        <outlet property="logInButten" destination="jnH-CW-YF5" id="h5j-FS-BAE"/>
+                        <outlet property="passwordHideOrShow" destination="U2N-Bn-7us" id="jWr-mP-vge"/>
                         <outlet property="passwordLabel" destination="mdc-jf-Mpl" id="GE3-eU-PZs"/>
                         <outlet property="passwordTextField" destination="o7c-wg-7uY" id="Yb3-Q0-4Zn"/>
+                        <outlet property="registerButten" destination="cso-Pg-dka" id="c9m-5t-51T"/>
                         <outlet property="signInLabel" destination="aPB-sd-eNs" id="Q0I-IZ-V9a"/>
                         <outlet property="welcomMassege" destination="ywn-LX-Vw6" id="DmY-P8-5Se"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v69-yn-RhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371.0144927536232" y="125.89285714285714"/>
+            <point key="canvasLocation" x="1370.4000000000001" y="125.4872563718141"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="sma-Ti-lVA">
@@ -228,11 +253,11 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TlA-lH-vmg">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TlA-lH-vmg">
                                                 <rect key="frame" x="30.5" y="160" width="284" height="68"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACj-Ue-zVr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="29"/>
                                                         <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="26"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
@@ -328,6 +353,7 @@
                         <outlet property="nameTextField" destination="QmZ-KW-C58" id="QCH-XJ-csa"/>
                         <outlet property="passwordLabel" destination="ACj-Ue-zVr" id="XxG-lt-b04"/>
                         <outlet property="passwordTextField" destination="bRa-op-pBM" id="CZd-cI-BXh"/>
+                        <outlet property="registerButton" destination="plc-jv-fIB" id="XGz-qh-XX7"/>
                         <outlet property="registerLabel" destination="Qzf-1m-Gme" id="kRB-cg-1rb"/>
                         <outlet property="userImageView" destination="Vmv-R2-tFl" id="bIL-ZP-leg"/>
                     </connections>
@@ -374,10 +400,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dah-GI-HGS">
-                                                    <rect key="frame" x="175" y="248" width="127" height="41"/>
+                                                    <rect key="frame" x="175" y="248" width="138" height="41"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POX-nN-BYm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="20.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="POX-nN-BYm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrip:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-iA-gUf">
                                                                     <rect key="frame" x="0.0" y="0.0" width="63.5" height="20.5"/>
@@ -386,15 +412,15 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kt-uB-TwY">
-                                                                    <rect key="frame" x="63.5" y="0.0" width="63.5" height="20.5"/>
+                                                                    <rect key="frame" x="74.5" y="0.0" width="63.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-ry-s5I">
-                                                            <rect key="frame" x="0.0" y="20.5" width="87" height="20.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-ry-s5I">
+                                                            <rect key="frame" x="0.0" y="20.5" width="98" height="20.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3G-c6-pRi">
                                                                     <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
@@ -403,7 +429,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-cp-AK3">
-                                                                    <rect key="frame" x="43.5" y="0.0" width="43.5" height="20.5"/>
+                                                                    <rect key="frame" x="54.5" y="0.0" width="43.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -443,8 +469,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descripLabel" destination="4Kt-uB-TwY" id="fgb-UG-tA3"/>
+                                            <outlet property="descripation" destination="ldN-iA-gUf" id="Zd6-U2-44G"/>
                                             <outlet property="paintImage" destination="5DM-cZ-ZqU" id="olD-V7-xUb"/>
-                                            <outlet property="priceLabel" destination="nZU-cp-AK3" id="U7W-9a-zHB"/>
+                                            <outlet property="price" destination="G3G-c6-pRi" id="lHs-GT-GiA"/>
+                                            <outlet property="priceLabel" destination="nZU-cp-AK3" id="xvu-fu-3SZ"/>
                                             <outlet property="userImage" destination="hv7-p1-RwH" id="fIt-V1-4Og"/>
                                         </connections>
                                     </tableViewCell>
@@ -463,9 +491,9 @@
                     <navigationItem key="navigationItem" id="2j8-m9-xCd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="q0V-zs-bvt">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="w0A-RP-Cad">
-                                <rect key="frame" x="289" y="5" width="70" height="34"/>
+                                <rect key="frame" x="261" y="5" width="98" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="poweroff" catalog="system" title="log off">
                                     <color key="baseForegroundColor" name="add &amp; log out"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -475,6 +503,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="logoutButton" destination="w0A-RP-Cad" id="HOA-nt-e4s"/>
                         <outlet property="quillTableView" destination="Fj8-ds-ah2" id="OCo-2d-w4W"/>
                         <segue destination="ebW-MC-8lv" kind="show" identifier="toNwePaintVC" id="CjE-pQ-Cjr"/>
                         <segue destination="wHl-T5-8QO" kind="show" identifier="toDetailsVC" id="4Qs-eH-8Ga"/>
@@ -601,11 +630,16 @@
                     <navigationItem key="navigationItem" id="7vD-Ix-Goq"/>
                     <connections>
                         <outlet property="contact" destination="l8x-OB-mci" id="wbn-F6-d38"/>
+                        <outlet property="contactLabel" destination="cPp-ZE-y2D" id="3dH-Iv-f8g"/>
                         <outlet property="descrip" destination="UpZ-aj-LyM" id="Vd2-Zl-UZ5"/>
+                        <outlet property="descriplabel" destination="MPx-p0-ujr" id="uh4-bl-rJ4"/>
                         <outlet property="newQuillImage" destination="FP1-5E-PbW" id="9wr-fN-HhB"/>
                         <outlet property="painter" destination="hUS-80-A4K" id="tbT-nq-lod"/>
+                        <outlet property="painterLabel" destination="Yly-Xm-zeo" id="YAv-3W-QQk"/>
                         <outlet property="price" destination="hux-Db-WrG" id="dV4-0A-9YD"/>
+                        <outlet property="priceLable" destination="xvM-oT-RfQ" id="3Sj-vi-nWZ"/>
                         <outlet property="signuator" destination="5T2-08-K8k" id="cak-P3-btY"/>
+                        <outlet property="signuatorLabel" destination="NzZ-eJ-tv3" id="x0D-Zc-q1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTu-n9-IHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -878,11 +912,12 @@
         <image name="1" width="736" height="920"/>
         <image name="109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept" width="450" height="450"/>
         <image name="doc.text.image" catalog="system" width="115" height="128"/>
-        <image name="eye.slash" catalog="system" width="128" height="86"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo-1553095066-5014bc7b7f2d" width="1000" height="666"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="poweroff" catalog="system" width="128" height="121"/>
         <namedColor name="add &amp; log out">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

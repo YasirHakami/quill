@@ -14,12 +14,14 @@ class HomeViewController:UIViewController{
     var selectedPost:Post?
     var selectedPostImage:UIImage?
     @IBOutlet weak var quillTableView: UITableView!
+    
+    @IBOutlet weak var logoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         quillTableView.dataSource = self
         quillTableView.delegate = self
         getNewQuill()
-        
+        logoutButton.setTitle("logout".localized, for: .normal)
         
        
         

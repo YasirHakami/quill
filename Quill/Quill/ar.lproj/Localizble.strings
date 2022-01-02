@@ -1,0 +1,25 @@
+/* 
+  Arabic.strings
+  Quill
+
+  Created by Yasir Hakami on 02/01/2022.
+  
+*/
+"email" = "البريد الالكتروني";
+"password" = "الرقم السري";
+"logIn" = "تسجيل دخول";
+"register" = "التسجيل";
+"changeLun" = "English";
+"signIn" = "دخول";
+"welcome" = "مرحبا ! من الجيد رؤيتك مرة آخرى";
+"name" = "الاسم";
+"ConfirmPassword" = "تآكيد الرقم السري";
+"bio" = "كلمة تعريفية";
+"price" = " السعر";
+"descripe" = " الوصف" ;
+"logout" = "تسجيل خروج";
+"contact" = "رقم التواصل";
+"signature" = "رقم للتوثيق";
+"SendNewPaint" = "اضافة لوحة جديدة";
+"Update" = "تعديل";
+"painter" = "الرسام";
