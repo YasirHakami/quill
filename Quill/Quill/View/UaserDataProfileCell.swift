@@ -7,11 +7,10 @@
 
 import Foundation
 import UIKit
+import Firebase
 class UaserDataProfileCell:UICollectionViewCell{
+    var selectedPost:Post?
     @IBOutlet weak var userPaintsimageView: UIImageView!
-    
-  
-    
     @IBOutlet weak var descripLabel: UILabel!
     
     func collectionCellStap(with post:Post) -> UICollectionViewCell {
@@ -25,6 +24,6 @@ class UaserDataProfileCell:UICollectionViewCell{
     
     override func prepareForReuse() {
         userPaintsimageView.image = nil
-
+        
     }
 }

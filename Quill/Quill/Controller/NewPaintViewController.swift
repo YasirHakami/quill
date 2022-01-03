@@ -13,6 +13,13 @@ class NewPaintViewController:UIViewController{
     var selectedPost:Post?
     var selectedPostImage:UIImage?
     let activityIndicator = UIActivityIndicatorView()
+    var fromProfile = true
+    @IBOutlet weak var deleteButtonForproFile: UIButton!{
+        didSet{
+            deleteButtonForproFile.setTitle("Delete".localized, for: .normal)
+        }
+    }
+    
     @IBOutlet weak var newImage: UIImageView!{
         didSet {
             newImage.isUserInteractionEnabled = true
@@ -60,11 +67,13 @@ class NewPaintViewController:UIViewController{
             sendButten.setTitle("Update".localized, for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "delete.left"), style: .plain, target: self, action: #selector(handleDelete))
             self.navigationItem.rightBarButtonItem = deleteBarButton
-            
         }else {
             sendButten.setTitle("SendNewPaint".localized, for: .normal)
             self.navigationItem.rightBarButtonItem = nil
-            
+        }
+        
+        if fromProfile {
+            deleteButtonForproFile.removeFromSuperview()
         }
        
     }
@@ -90,6 +99,30 @@ class NewPaintViewController:UIViewController{
             }
         }
     }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        let ref = Firestore.firestore().collection("posts")
+        if let selectedPost = selectedPost {
+            ref.document(selectedPost.id).delete { error in
+                if let error = error {
+                    print("Error in db delete",error)
+                }else {
+                    // Create a reference to the file to delete
+                    let storageRef = Storage.storage().reference(withPath: "posts/\(selectedPost.user.id)/\(selectedPost.id)")
+                    // Delete the file
+                    storageRef.delete { error in
+                        if let error = error {
+                            print("Error in storage delete",error)
+                        } else {
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
     
     @IBAction func handelNewQuill(_ sender: Any) {
             if let image = newImage.image,

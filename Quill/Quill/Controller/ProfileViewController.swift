@@ -23,12 +23,10 @@ class ProfileViewController:UIViewController{
     @IBOutlet weak var userProfileImage: UIImageView!{
         didSet {
             userProfileImage.layer.borderColor = UIColor.systemGray.cgColor
+            userProfileImage.layer.borderWidth = 2.0
+            userProfileImage.layer.cornerRadius = userProfileImage.bounds.height / 2
             userProfileImage.layer.masksToBounds = true
             userProfileImage.isUserInteractionEnabled = true
-            userProfileImage.layer.masksToBounds = true
-            userProfileImage.layer.cornerRadius = 7
-            userProfileImage.layer.borderColor = UIColor.systemBrown.cgColor
-            userProfileImage.layer.borderWidth = 2.0
         }
         
     }
@@ -106,6 +104,8 @@ class ProfileViewController:UIViewController{
             }
         }
     }
+    
+    
     func getProfileData(){
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore()
@@ -146,6 +146,7 @@ class ProfileViewController:UIViewController{
                 let vc = segue.destination as! NewPaintViewController
                 vc.selectedPost = selectedPost
                 vc.selectedPostImage = selectedPostImage
+                vc.fromProfile = false
            
         }
         
@@ -171,4 +172,5 @@ extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSou
         selectedPost = userPosts[indexPath.row]
         performSegue(withIdentifier: "toDetails", sender: self)
     }
+    
 }

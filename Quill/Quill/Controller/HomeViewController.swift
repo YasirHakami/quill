@@ -115,6 +115,7 @@ class HomeViewController:UIViewController{
                 let vc = segue.destination as! NewPaintViewController
                 vc.selectedPost = selectedPost
                 vc.selectedPostImage = selectedPostImage
+                vc.fromProfile = true
             }else {
                 let vc = segue.destination as! DetailsViewController
                 vc.selectedPost = selectedPost
