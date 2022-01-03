@@ -10,7 +10,16 @@ import Firebase
 import UIKit
 
 class ProfileViewController:UIViewController{
+    var userPosts = [Post]()
+    var selectedPost:Post?
+    var selectedPostImage:UIImage?
+    @IBOutlet weak var userPaintsCollectionView: UICollectionView!
     
+    @IBOutlet weak var profileTitleLabel: UILabel!{
+        didSet{
+            profileTitleLabel.text = "profileTitle".localized
+        }
+    }
     @IBOutlet weak var userProfileImage: UIImageView!{
         didSet {
             userProfileImage.layer.borderColor = UIColor.systemGray.cgColor
@@ -30,8 +39,10 @@ class ProfileViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userPaintsCollectionView.dataSource = self
+        userPaintsCollectionView.delegate = self
         getProfileData()
+        getPosts()
         backView.layer.masksToBounds = true
         backView.layer.cornerRadius = 7
         backView.layer.borderColor = UIColor.systemBrown.cgColor
@@ -39,7 +50,62 @@ class ProfileViewController:UIViewController{
         
     }
     
-    
+    func getPosts() {
+        let ref = Firestore.firestore()
+        ref.collection("posts").order(by: "createdAt",descending: true).addSnapshotListener { snapshot, error in
+            if let error = error {
+                print("DB ERROR Posts",error.localizedDescription)
+            }
+            if let snapshot = snapshot {
+                snapshot.documentChanges.forEach { diff in
+                    let post = diff.document.data()
+                    switch diff.type {
+                    case .added :
+                        if let userId = post["userId"] as? String {
+                            if let currentUser = Auth.auth().currentUser {
+                                let currentUserId = currentUser.uid
+                                if userId == currentUserId {
+                                    ref.collection("users").document(userId).getDocument { userSnapshot, error in
+                                        if let error = error {
+                                            print("ERROR user Data",error.localizedDescription)
+                                            
+                                        }
+                                        if let userSnapshot = userSnapshot,
+                                           let userData = userSnapshot.data(){
+                                            let user = User(dict:userData)
+                                            let post = Post(dict:post,id:diff.document.documentID,user:user)
+                                            self.userPosts.insert(post, at: 0)
+                                            DispatchQueue.main.async {
+                                                self.userPaintsCollectionView.reloadData()
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    case .modified:
+                        let postId = diff.document.documentID
+                        if let currentPost = self.userPosts.first(where: {$0.id == postId}),
+                           let updateIndex = self.userPosts.firstIndex(where: {$0.id == postId}){
+                            let newPost = Post(dict:post, id: postId, user: currentPost.user)
+                            self.userPosts[updateIndex] = newPost
+                            DispatchQueue.main.async {
+                                self.userPaintsCollectionView.reloadData()
+                            }
+                        }
+                    case .removed:
+                        let postId = diff.document.documentID
+                        if let deleteIndex = self.userPosts.firstIndex(where: {$0.id == postId}){
+                            self.userPosts.remove(at: deleteIndex)
+                            DispatchQueue.main.async {
+                                self.userPaintsCollectionView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     func getProfileData(){
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore()
@@ -73,5 +139,36 @@ class ProfileViewController:UIViewController{
                 }
                 
             }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                let vc = segue.destination as! NewPaintViewController
+                vc.selectedPost = selectedPost
+                vc.selectedPostImage = selectedPostImage
+           
+        }
+        
+}
+
+
+extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return userPosts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellcollection", for: indexPath) as! UaserDataProfileCell
+        
+        
+        
+        return cell.collectionCellStap(with: userPosts[indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! UaserDataProfileCell
+        selectedPostImage = cell.userPaintsimageView.image
+        selectedPost = userPosts[indexPath.row]
+        performSegue(withIdentifier: "toDetails", sender: self)
     }
 }
