@@ -45,6 +45,11 @@ class RegisterViewController:UIViewController{
         passwordLabel.text = "password".localized
         confirmPassword.text = "ConfirmPassword".localized
         bioLabel.text = "bio".localized
+        nameTextField.clearButtonMode = .whileEditing
+        emailTextField.clearButtonMode = .whileEditing
+        passwordTextField.clearButtonMode = .whileEditing
+        confirmTextField.clearButtonMode = .whileEditing
+        bioTextField.clearButtonMode = .whileEditing
     }
     
     

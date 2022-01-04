@@ -36,6 +36,8 @@ class LogeInViewController: UIViewController {
         changeLangugeButten.setTitle("changeLun".localized, for: .normal)
         signInLabel.text = "signIn".localized
         welcomMassege.text = "welcome".localized
+        emailTextField.clearButtonMode = .whileEditing
+        passwordTextField.clearButtonMode = .whileEditing
         
     }
     @IBAction func changeLanguge(_ sender: Any) {
@@ -80,8 +82,4 @@ class LogeInViewController: UIViewController {
     
 }
 
-extension String {
-    var localized: String {
-        return NSLocalizedString(self, tableName: "Localizble", bundle: .main, value: self, comment: self)
-    }
-}
+
