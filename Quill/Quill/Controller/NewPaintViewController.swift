@@ -101,26 +101,34 @@ class NewPaintViewController:UIViewController{
     }
     
     @IBAction func deleteButton(_ sender: Any) {
-        let ref = Firestore.firestore().collection("posts")
-        if let selectedPost = selectedPost {
-            ref.document(selectedPost.id).delete { error in
-                if let error = error {
-                    print("Error in db delete",error)
-                }else {
-                    // Create a reference to the file to delete
-                    let storageRef = Storage.storage().reference(withPath: "posts/\(selectedPost.user.id)/\(selectedPost.id)")
-                    // Delete the file
-                    storageRef.delete { error in
-                        if let error = error {
-                            print("Error in storage delete",error)
-                        } else {
-                            self.navigationController?.popViewController(animated: true)
+        let alretDelete = UIAlertController(title: "Delete".localized, message: "DeleteM".localized, preferredStyle: .alert)
+        alretDelete.addAction(UIAlertAction(title: "ok".localized, style: .destructive, handler: { action in
+            let ref = Firestore.firestore().collection("posts")
+            if let selectedPost = self.selectedPost {
+                ref.document(selectedPost.id).delete { error in
+                    if let error = error {
+                        print("Error in db delete",error)
+                    }else {
+                        // Create a reference to the file to delete
+                        let storageRef = Storage.storage().reference(withPath: "posts/\(selectedPost.user.id)/\(selectedPost.id)")
+                        // Delete the file
+                        storageRef.delete { error in
+                            if let error = error {
+                                print("Error in storage delete",error)
+                            } else {
+                                self.navigationController?.popViewController(animated: true)
+                            }
                         }
+                        
                     }
-                    
                 }
             }
-        }
+            
+            }))
+        alretDelete.addAction(UIAlertAction(title: "Back".localized, style: .default, handler: { action in
+            print("Back")
+        }))
+        present(alretDelete, animated: true, completion: nil)
     }
     
     

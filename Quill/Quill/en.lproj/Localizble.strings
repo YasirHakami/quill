@@ -17,7 +17,7 @@
 "bio" = "bio";
 "price" = "Price";
 "descripe" = "Descripe" ;
-"logout" = "Off";
+"logout" = "Sign Out";
 "contact" = "Contact";
 "signature" = "Signature";
 "SendNewPaint" = "Send New Paint";
@@ -25,3 +25,6 @@
 "painter" = "painter";
 "profileTitle" = "Paints";
 "Delete" = "Delete";
+"ok" = "I'm sure";
+"Back" = "Back";
+"DeleteM" = "Are You Sure ?";

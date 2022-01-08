@@ -28,15 +28,22 @@ class HomeViewController:UIViewController{
     }
     
     @IBAction func handelLogOut(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInNavigationController") as? UINavigationController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+        let alret = UIAlertController(title: "logout".localized, message: "logout".localized, preferredStyle: .alert)
+        alret.addAction(UIAlertAction(title: "ok".localized, style: .destructive, handler: { action in
+            do {
+                try Auth.auth().signOut()
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInNavigationController") as? UINavigationController {
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+            } catch  {
+                print("ERROR in signout",error.localizedDescription)
             }
-        } catch  {
-            print("ERROR in signout",error.localizedDescription)
-        }
+        }))
+        alret.addAction(UIAlertAction(title: "Back".localized, style: .default, handler: {action in
+            print("Back")
+        }))
+        present(alret, animated: true, completion: nil)
     }
     
     
