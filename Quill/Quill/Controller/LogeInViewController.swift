@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 class LogeInViewController: UIViewController {
 
+    @IBOutlet weak var errorLoginMassegeLable: UILabel!
     @IBOutlet weak var signInLabel: UILabel!
     @IBOutlet weak var welcomMassege: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -70,6 +71,11 @@ class LogeInViewController: UIViewController {
            let password = passwordTextField.text {
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if error == nil {
+                    print("Login Succesfully")
+                }else{
+                    self.errorLoginMassegeLable.text = error?.localizedDescription
+                }
                 if let _ = authResult {
                     if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileController") as? UITabBarController {
                         vc.modalPresentationStyle = .fullScreen

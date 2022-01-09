@@ -11,6 +11,8 @@ import UIKit
 
 class RegisterViewController:UIViewController{
     let imagePickerController = UIImagePickerController()
+    
+    @IBOutlet weak var errorMasgeLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView! {
         didSet {
             userImageView.layer.borderColor = UIColor.systemRed.cgColor
@@ -50,6 +52,7 @@ class RegisterViewController:UIViewController{
         passwordTextField.clearButtonMode = .whileEditing
         confirmTextField.clearButtonMode = .whileEditing
         bioTextField.clearButtonMode = .whileEditing
+        
     }
     
     
@@ -62,10 +65,12 @@ class RegisterViewController:UIViewController{
            let password = passwordTextField.text,
            let confirmPassword = confirmTextField.text,
            password == confirmPassword {
+           
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error {
-                    print("Registration Auth Error",error.localizedDescription)
+                    self.errorMasgeLabel.text = error.localizedDescription
                 }
+                
                 if let authResult = authResult {
                     let storageRef = Storage.storage().reference(withPath: "users/\(authResult.user.uid)")
                     let uploadMeta = StorageMetadata.init()
@@ -103,6 +108,12 @@ class RegisterViewController:UIViewController{
                         }
                     }
                 }
+            }
+        }else{
+            if passwordTextField.text != confirmPassword.text! {
+                errorMasgeLabel.text = "Password Not Matching"
+            }else{
+                errorMasgeLabel.text = "Can't be empty!! "
             }
         }
     }

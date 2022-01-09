@@ -75,6 +75,7 @@ class NewPaintViewController:UIViewController{
         if fromProfile {
             deleteButtonForproFile.removeFromSuperview()
         }
+        
        
     }
     @objc func handleDelete (_ sender: UIBarButtonItem) {
