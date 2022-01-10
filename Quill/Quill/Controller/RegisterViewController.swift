@@ -111,9 +111,9 @@ class RegisterViewController:UIViewController{
             }
         }else{
             if passwordTextField.text != confirmPassword.text! {
-                errorMasgeLabel.text = "Password Not Matching"
+                errorMasgeLabel.text = "errorRegisteration1".localized
             }else{
-                errorMasgeLabel.text = "Can't be empty!! "
+                errorMasgeLabel.text = "errorRegisteration2".localized
             }
         }
     }

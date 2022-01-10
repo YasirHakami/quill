@@ -28,3 +28,9 @@
 "ok" = "متآكد";
 "Back" = "الرجوع";
 "DeleteM" = "هل آنت متآكد ؟";
+"errorLoginVC" = "يجب ملء خانة الاميل و الرقم السري بشكل صحيح";
+"errorRegisteration1" = "الرقم السري غير مطابق";
+"errorRegisteration2" = "لا يمكن ان يكون فارغ ";
+"langugeAlret" = "Restart The App";
+"done" = "Ok";
+"no_" = "Back";

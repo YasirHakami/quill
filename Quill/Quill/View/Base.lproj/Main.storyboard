@@ -118,7 +118,7 @@
                                     <action selector="changePasswordVisibility:" destination="71E-hg-sXY" eventType="touchUpInside" id="M5k-On-Axb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="710-jb-6S3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="710-jb-6S3">
                                 <rect key="frame" x="10" y="528" width="360" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -325,7 +325,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-4M-JEi">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-4M-JEi">
                                                 <rect key="frame" x="5" y="398" width="335" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -830,18 +830,18 @@
             <objects>
                 <viewController id="ebW-MC-8lv" customClass="NewPaintViewController" customModule="Quill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xha-LM-v7I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-Yo-7Dc">
-                                <rect key="frame" x="34" y="82" width="307" height="156"/>
+                                <rect key="frame" x="34" y="38" width="307" height="156"/>
                                 <color key="tintColor" name="add &amp; log out"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="Wel-n4-usC"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-OK-4aa">
-                                <rect key="frame" x="30" y="286" width="315" height="265"/>
+                                <rect key="frame" x="30" y="242" width="315" height="265"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="QTO-4q-rXg">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
@@ -926,7 +926,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUM-ri-h6j">
-                                <rect key="frame" x="77" y="622" width="246" height="31"/>
+                                <rect key="frame" x="77" y="578" width="246" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send New Paint">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -937,7 +937,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l19-Ms-WPl">
-                                <rect key="frame" x="77" y="583" width="246" height="31"/>
+                                <rect key="frame" x="77" y="539" width="246" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -1026,7 +1026,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CjE-pQ-Cjr"/>
+        <segue reference="pzF-RS-wl7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="736" height="920"/>

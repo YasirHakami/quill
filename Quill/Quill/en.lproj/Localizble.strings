@@ -25,6 +25,14 @@
 "painter" = "painter";
 "profileTitle" = "Paints";
 "Delete" = "Delete";
-"ok" = "sure";
+"ok" = "Sure";
 "Back" = "Back";
 "DeleteM" = "Are You Sure ?";
+"errorLoginVC" = "Email and password should filled correctly";
+"errorRegisteration1" = "Password Not Matching";
+"errorRegisteration2" = "Can't be empty!! ";
+"langugeAlret" = "اعادة تشغيل البرنامج";
+"ar_lunge" = "اللغة العربية";
+"done" = "موافق";
+"no_" = "رجوع";
+

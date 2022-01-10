@@ -42,10 +42,15 @@ class LogeInViewController: UIViewController {
         
     }
     @IBAction func changeLanguge(_ sender: Any) {
-        let currentLang = Locale.current.languageCode
-        let newLang = currentLang == "en" ? "ar" : "en"
-        UserDefaults.standard.setValue([newLang], forKey: "AppleLanguages")
-        exit(0)
+        let alret = UIAlertController(title: "langugeAlret".localized, message: "changeLun".localized, preferredStyle: .alert)
+        alret.addAction(UIAlertAction(title: "done".localized, style: .default, handler: { action in
+            let currentLang = Locale.current.languageCode
+            let newLang = currentLang == "en" ? "ar" : "en"
+            UserDefaults.standard.setValue([newLang], forKey: "AppleLanguages")
+            exit(0)
+        }))
+        alret.addAction(UIAlertAction(title: "no_".localized, style: .default, handler: nil))
+        present(alret, animated: true, completion: nil)
         
     }
     @IBAction func changePasswordVisibility(_ sender: UIButton) {
@@ -72,9 +77,9 @@ class LogeInViewController: UIViewController {
             
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if error == nil {
-                    print("Login Succesfully")
+                    self.errorLoginMassegeLable.text = "Login Succesfully"
                 }else{
-                    self.errorLoginMassegeLable.text = error?.localizedDescription
+                    self.errorLoginMassegeLable.text = "errorLoginVC".localized
                 }
                 if let _ = authResult {
                     if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileController") as? UITabBarController {

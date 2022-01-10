@@ -16,16 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="IIF-NV-Aa3">
-                                <rect key="frame" x="54" y="312" width="307" height="273"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quill-and-ink-silhouette" translatesAutoresizingMaskIntoConstraints="NO" id="IIF-NV-Aa3">
+                                <rect key="frame" x="5" y="312" width="404" height="273"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IIF-NV-Aa3" secondAttribute="bottom" constant="277" id="2yF-qE-qNb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IIF-NV-Aa3" secondAttribute="trailing" constant="53" id="NcP-mM-aly"/>
-                            <constraint firstItem="IIF-NV-Aa3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="Pa5-3q-Thq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IIF-NV-Aa3" secondAttribute="trailing" constant="5" id="NcP-mM-aly"/>
+                            <constraint firstItem="IIF-NV-Aa3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Pa5-3q-Thq"/>
                             <constraint firstItem="IIF-NV-Aa3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="268" id="WZo-BP-fvq"/>
                         </constraints>
                     </view>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Unknown" width="183" height="275"/>
+        <image name="quill-and-ink-silhouette" width="461" height="615"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
