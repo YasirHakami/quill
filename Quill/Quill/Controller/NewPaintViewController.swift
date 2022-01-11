@@ -189,6 +189,7 @@ class NewPaintViewController:UIViewController{
                                 }
                                 Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
                                 self.navigationController?.popViewController(animated: true)
+                                self.resetElement()
                             }
                         }
                     }
@@ -236,6 +237,13 @@ extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationC
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+    func resetElement(){
+        descripTextField.text = ""
+        priceTextField.text = ""
+        contactTextField.text = ""
+        signatureTextField.text = ""
+        newImage.image = UIImage(named: "")
     }
     
 }
