@@ -1,8 +1,8 @@
-# quill
+# Quill
 
 ## Description
 
-- it's app to provide for painters way to they can sell they prodect, built with swift 5 utilizing Internationalization and Localization.
+- An app for painters to sell there product.
 
 ## Demo
 
