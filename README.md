@@ -6,8 +6,8 @@
 
 ## Demo
 
-![](Simulator Screen Recording - iPhone 13 - 2022-01-12 at 10.23.26.mp4)
-![](Simulator Screen Recording - iPhone 13 - 2022-01-12 at 10.25.01.mp4)
+![](Simulator Screen Shot - iPhone 13 - 2022-01-12 at 10.25.29.png)
+![](Simulator Screen Shot - iPhone 13 - 2022-01-12 at 10.25.14.png)
 
 
 ## user Stories 
