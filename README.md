@@ -6,8 +6,8 @@
 
 ## Demo
 
-![](light.gif)
-![](dark.gif)
+![](Simulator Screen Recording - iPhone 13 - 2022-01-12 at 10.23.26.mp4)
+![](Simulator Screen Recording - iPhone 13 - 2022-01-12 at 10.25.01.mp4)
 
 
 ## user Stories 
@@ -25,10 +25,12 @@
 
 ## ERD
 
-/Users/yasir/Desktop/TuwaiqAcademy/quill/ERD.png
+![](ERD.png)
+
+
 
 
 ## Wireframe
+![](wirefrime.png)
 
-/Users/yasir/Desktop/TuwaiqAcademy/quill/wirefrime.png
 
