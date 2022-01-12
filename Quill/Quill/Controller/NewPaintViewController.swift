@@ -75,7 +75,10 @@ class NewPaintViewController:UIViewController{
         if fromProfile {
             deleteButtonForproFile.removeFromSuperview()
         }
-        
+        descripTextField.delegate = self
+        priceTextField.delegate = self
+        contactTextField.delegate = self
+        signatureTextField.delegate = self
        
     }
     @objc func handleDelete (_ sender: UIBarButtonItem) {
@@ -202,7 +205,7 @@ class NewPaintViewController:UIViewController{
     }
 
 
-extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @objc func chooseImage() {
         self.showAlert()
     }
@@ -245,5 +248,7 @@ extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationC
         signatureTextField.text = ""
         newImage.image = UIImage(systemName: "doc.text.image")
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 }

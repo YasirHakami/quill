@@ -52,7 +52,18 @@ class RegisterViewController:UIViewController{
         passwordTextField.clearButtonMode = .whileEditing
         confirmTextField.clearButtonMode = .whileEditing
         bioTextField.clearButtonMode = .whileEditing
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmTextField.delegate = self
+        bioTextField.delegate = self
         
+        // keybord Gesture
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.singleTap(sender:)))
+                singleTapGestureRecognizer.numberOfTapsRequired = 1
+                singleTapGestureRecognizer.isEnabled = true
+                singleTapGestureRecognizer.cancelsTouchesInView = false
+                self.view.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
     
@@ -160,4 +171,16 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+}
+extension RegisterViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    @objc func singleTap(sender: UITapGestureRecognizer) {
+            self.emailTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        self.confirmTextField.resignFirstResponder()
+        self.nameTextField.resignFirstResponder()
+        self.bioTextField.resignFirstResponder()
+        }
 }
