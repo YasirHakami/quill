@@ -6,7 +6,7 @@
 
 ## Demo
 
-![](LightMood.mp4)
+![](LightMood.gif)
 ![](DarkMood.mp4)
 
 
