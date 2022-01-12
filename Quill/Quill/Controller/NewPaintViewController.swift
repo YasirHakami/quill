@@ -243,7 +243,7 @@ extension NewPaintViewController: UIImagePickerControllerDelegate, UINavigationC
         priceTextField.text = ""
         contactTextField.text = ""
         signatureTextField.text = ""
-        newImage.image = UIImage(named: "")
+        newImage.image = UIImage(systemName: "doc.text.image")
     }
     
 }
