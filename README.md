@@ -7,7 +7,7 @@
 ## Demo
 
 ![](LightMood.gif)
-![](DarkMood.mp4)
+![](DarkMood.gif)
 
 
 ## user Stories 

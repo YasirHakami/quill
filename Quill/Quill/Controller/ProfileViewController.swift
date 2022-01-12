@@ -15,6 +15,12 @@ class ProfileViewController:UIViewController{
     var selectedPostImage:UIImage?
     @IBOutlet weak var userPaintsCollectionView: UICollectionView!
     
+    @IBOutlet weak var logoutButten: UIButton!{
+        didSet{
+            logoutButten.setTitle("logout".localized, for: .normal)
+        }
+    }
+    
     @IBOutlet weak var profileTitleLabel: UILabel!{
         didSet{
             profileTitleLabel.text = "profileTitle".localized
@@ -105,6 +111,25 @@ class ProfileViewController:UIViewController{
         }
     }
     
+    @IBAction func HandelLogOut(_ sender: Any) {
+        let alret = UIAlertController(title: "logout".localized, message: "logout".localized, preferredStyle: .alert)
+        alret.addAction(UIAlertAction(title: "ok".localized, style: .destructive, handler: { action in
+            do {
+                try Auth.auth().signOut()
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInNavigationController") as? UINavigationController {
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+            } catch  {
+                print("ERROR in signout",error.localizedDescription)
+            }
+        }))
+        alret.addAction(UIAlertAction(title: "Back".localized, style: .default, handler: {action in
+            print("Back")
+        }))
+        present(alret, animated: true, completion: nil)
+        
+    }
     
     func getProfileData(){
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}

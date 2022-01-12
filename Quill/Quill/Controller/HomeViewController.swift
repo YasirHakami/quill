@@ -15,36 +15,19 @@ class HomeViewController:UIViewController{
     var selectedPostImage:UIImage?
     @IBOutlet weak var quillTableView: UITableView!
     
-    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         quillTableView.dataSource = self
         quillTableView.delegate = self
         getNewQuill()
-        logoutButton.setTitle("logout".localized, for: .normal)
+        
         
        
         
     }
     
-    @IBAction func handelLogOut(_ sender: Any) {
-        let alret = UIAlertController(title: "logout".localized, message: "logout".localized, preferredStyle: .alert)
-        alret.addAction(UIAlertAction(title: "ok".localized, style: .destructive, handler: { action in
-            do {
-                try Auth.auth().signOut()
-                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInNavigationController") as? UINavigationController {
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true, completion: nil)
-                }
-            } catch  {
-                print("ERROR in signout",error.localizedDescription)
-            }
-        }))
-        alret.addAction(UIAlertAction(title: "Back".localized, style: .default, handler: {action in
-            print("Back")
-        }))
-        present(alret, animated: true, completion: nil)
-    }
+
     
     
     

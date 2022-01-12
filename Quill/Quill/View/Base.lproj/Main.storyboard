@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lWd-Bd-Abp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lWd-Bd-Abp">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -511,22 +511,8 @@
                             <constraint firstItem="Fj8-ds-ah2" firstAttribute="top" secondItem="aTK-ij-6dG" secondAttribute="top" id="qCS-yi-ysV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2j8-m9-xCd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="q0V-zs-bvt">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="w0A-RP-Cad">
-                                <rect key="frame" x="261" y="5" width="98" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="plain" image="poweroff" catalog="system" title="log off">
-                                    <color key="baseForegroundColor" name="add &amp; log out"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="handelLogOut:" destination="6D3-Sb-WeS" eventType="touchUpInside" id="Vur-GP-ebU"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="2j8-m9-xCd"/>
                     <connections>
-                        <outlet property="logoutButton" destination="w0A-RP-Cad" id="HOA-nt-e4s"/>
                         <outlet property="quillTableView" destination="Fj8-ds-ah2" id="OCo-2d-w4W"/>
                         <segue destination="ebW-MC-8lv" kind="show" identifier="toNwePaintVC" id="CjE-pQ-Cjr"/>
                         <segue destination="wHl-T5-8QO" kind="show" identifier="toDetailsVC" id="4Qs-eH-8Ga"/>
@@ -684,24 +670,34 @@
                                 <rect key="frame" x="5" y="10" width="365" height="222"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZkU-vT-QXK">
-                                        <rect key="frame" x="102" y="99" width="150" height="150"/>
+                                        <rect key="frame" x="183" y="114" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="cdv-9K-3yz"/>
                                             <constraint firstAttribute="width" constant="150" id="u34-BO-8hh"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-qM-xXB" userLabel="Stack Name &amp; bio">
-                                        <rect key="frame" x="5" y="7" width="355" height="85.5"/>
+                                        <rect key="frame" x="5" y="7" width="355" height="100.5"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cUD-Kq-seX">
+                                                <rect key="frame" x="140" y="0.0" width="75" height="31.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.left.2.fill" catalog="system" title="Out" subtitle="">
+                                                    <color key="baseForegroundColor" name="add &amp; log out"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="HandelLogOut:" destination="vtg-yw-xDQ" eventType="touchUpInside" id="EwY-H8-DUy"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quill User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-Wf-y8R">
-                                                <rect key="frame" x="80" y="0.0" width="195" height="42"/>
+                                                <rect key="frame" x="80" y="31.5" width="195" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quill Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-bY-3hv">
-                                                <rect key="frame" x="126" y="42" width="103" height="43.5"/>
+                                                <rect key="frame" x="126" y="65.5" width="103" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -712,12 +708,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ZkU-vT-QXK" firstAttribute="top" secondItem="Wt6-d1-huu" secondAttribute="top" constant="99" id="InD-R8-Ihw"/>
+                                    <constraint firstItem="ZkU-vT-QXK" firstAttribute="top" secondItem="Wt6-d1-huu" secondAttribute="top" constant="114" id="InD-R8-Ihw"/>
                                     <constraint firstAttribute="trailing" secondItem="OHF-qM-xXB" secondAttribute="trailing" constant="5" id="OnI-wB-yvQ"/>
                                     <constraint firstItem="OHF-qM-xXB" firstAttribute="leading" secondItem="Wt6-d1-huu" secondAttribute="leading" constant="5" id="Zuc-IE-rIn"/>
                                     <constraint firstItem="ZkU-vT-QXK" firstAttribute="top" secondItem="OHF-qM-xXB" secondAttribute="bottom" constant="6.5" id="f73-1V-kfk"/>
                                     <constraint firstItem="OHF-qM-xXB" firstAttribute="top" secondItem="Wt6-d1-huu" secondAttribute="top" constant="7" id="ioE-tC-AJk"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZkU-vT-QXK" secondAttribute="trailing" constant="113" id="sP4-r9-19s"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZkU-vT-QXK" secondAttribute="trailing" constant="32" id="sP4-r9-19s"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-Hu-Kpv">
@@ -813,6 +809,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="pGB-lx-TH3"/>
                     <connections>
                         <outlet property="backView" destination="Wt6-d1-huu" id="2m3-le-rO2"/>
+                        <outlet property="logoutButten" destination="cUD-Kq-seX" id="xRv-AN-qVo"/>
                         <outlet property="profileTitleLabel" destination="QKl-p3-Hds" id="ub8-3p-m1a"/>
                         <outlet property="uaserNameLabel" destination="lhY-Wf-y8R" id="ewe-R8-dyA"/>
                         <outlet property="userBioLabel" destination="0gf-bY-3hv" id="C49-M5-7vX"/>
@@ -830,18 +827,18 @@
             <objects>
                 <viewController id="ebW-MC-8lv" customClass="NewPaintViewController" customModule="Quill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xha-LM-v7I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-Yo-7Dc">
-                                <rect key="frame" x="34" y="38" width="307" height="156"/>
+                                <rect key="frame" x="34" y="82" width="307" height="156"/>
                                 <color key="tintColor" name="add &amp; log out"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="Wel-n4-usC"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-OK-4aa">
-                                <rect key="frame" x="30" y="242" width="315" height="265"/>
+                                <rect key="frame" x="30" y="286" width="315" height="265"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="QTO-4q-rXg">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
@@ -926,7 +923,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUM-ri-h6j">
-                                <rect key="frame" x="77" y="578" width="246" height="31"/>
+                                <rect key="frame" x="77" y="622" width="246" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send New Paint">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -937,7 +934,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l19-Ms-WPl">
-                                <rect key="frame" x="77" y="539" width="246" height="31"/>
+                                <rect key="frame" x="77" y="583" width="246" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -1026,18 +1023,18 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pzF-RS-wl7"/>
+        <segue reference="CjE-pQ-Cjr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="736" height="920"/>
         <image name="109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept" width="450" height="450"/>
+        <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="128" height="86"/>
         <image name="doc.text.image" catalog="system" width="115" height="128"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo-1553095066-5014bc7b7f2d" width="1000" height="666"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="poweroff" catalog="system" width="128" height="121"/>
         <namedColor name="add &amp; log out">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
