@@ -60,10 +60,10 @@ class RegisterViewController:UIViewController{
         
         // keybord Gesture
         let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.singleTap(sender:)))
-                singleTapGestureRecognizer.numberOfTapsRequired = 1
-                singleTapGestureRecognizer.isEnabled = true
-                singleTapGestureRecognizer.cancelsTouchesInView = false
-                self.view.addGestureRecognizer(singleTapGestureRecognizer)
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
     
@@ -76,7 +76,7 @@ class RegisterViewController:UIViewController{
            let password = passwordTextField.text,
            let confirmPassword = confirmTextField.text,
            password == confirmPassword {
-           
+            
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error {
                     self.errorMasgeLabel.text = error.localizedDescription
@@ -177,10 +177,10 @@ extension RegisterViewController:UITextFieldDelegate{
         textField.resignFirstResponder()
     }
     @objc func singleTap(sender: UITapGestureRecognizer) {
-            self.emailTextField.resignFirstResponder()
+        self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
         self.confirmTextField.resignFirstResponder()
         self.nameTextField.resignFirstResponder()
         self.bioTextField.resignFirstResponder()
-        }
+    }
 }

@@ -112,7 +112,7 @@ class ProfileViewController:UIViewController{
     }
     
     @IBAction func HandelLogOut(_ sender: Any) {
-        let alret = UIAlertController(title: "logout".localized, message: "logout".localized, preferredStyle: .alert)
+        let alret = UIAlertController(title: "logout".localized, message: "singOutMassege".localized, preferredStyle: .alert)
         alret.addAction(UIAlertAction(title: "ok".localized, style: .destructive, handler: { action in
             do {
                 try Auth.auth().signOut()
