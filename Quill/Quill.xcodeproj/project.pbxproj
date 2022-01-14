@@ -16,6 +16,7 @@
 		4544F0C0278B13F60099E807 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4544F0BF278B13F60099E807 /* IQKeyboardManagerSwift */; };
 		454E8FEA27776AB000016579 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8FE927776AB000016579 /* ImageUrl.swift */; };
 		454E8FEC27777D3200016579 /* QullCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E8FEB27777D3200016579 /* QullCell.swift */; };
+		458B69602790FA76008289CB /* FaceIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B695F2790FA76008289CB /* FaceIDViewController.swift */; };
 		45CE67BE2778493F004101EB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE67BD2778493F004101EB /* DetailsViewController.swift */; };
 		45D083672775ECE900FBF918 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D083662775ECE900FBF918 /* ProfileViewController.swift */; };
 		45E4F5AA27799FE700CA3AAC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E4F5A927799FE700CA3AAC /* Activity.swift */; };
@@ -66,6 +67,7 @@
 		453C825C27846E4E000B72F1 /* Translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
 		454E8FE927776AB000016579 /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		454E8FEB27777D3200016579 /* QullCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QullCell.swift; sourceTree = "<group>"; };
+		458B695F2790FA76008289CB /* FaceIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDViewController.swift; sourceTree = "<group>"; };
 		45CE67BD2778493F004101EB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		45D083662775ECE900FBF918 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		45E4F5A927799FE700CA3AAC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				45FBB0212775B683007C3785 /* RegisterViewController.swift */,
 				45F542692775DF7F0040B3C6 /* HomeViewController.swift */,
 				45CE67BD2778493F004101EB /* DetailsViewController.swift */,
+				458B695F2790FA76008289CB /* FaceIDViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458B69602790FA76008289CB /* FaceIDViewController.swift in Sources */,
 				45224BAC277627A500333D5D /* NewPaintViewController.swift in Sources */,
 				45D083672775ECE900FBF918 /* ProfileViewController.swift in Sources */,
 				45F5426A2775DF7F0040B3C6 /* HomeViewController.swift in Sources */,
@@ -583,6 +587,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -612,6 +617,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};
