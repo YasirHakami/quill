@@ -21,6 +21,7 @@
 - UIKit
 - Firebase
 - IQKeyboardManagerSwift
+- LocalAuthentication
 
 
 ## ERD
