@@ -17,7 +17,10 @@ class FaceIDViewConntroller:UIViewController{
         faceid()
     }
     
- 
+    @IBAction func pressFaceID(_ sender: Any) {
+        faceid()
+    }
+    
     func faceid(){
         let localAuthentiocationContext = LAContext()
         var authorizationError : NSError?

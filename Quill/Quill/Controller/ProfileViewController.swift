@@ -36,7 +36,7 @@ class ProfileViewController:UIViewController{
         }
         
     }
-    @IBOutlet weak var backView: UIView!
+    
     var userImage = ""
     @IBOutlet weak var uaserNameLabel: UILabel!
     @IBOutlet weak var userBioLabel: UILabel!
@@ -47,10 +47,7 @@ class ProfileViewController:UIViewController{
         userPaintsCollectionView.delegate = self
         getProfileData()
         getPosts()
-        backView.layer.masksToBounds = true
-        backView.layer.cornerRadius = 7
-        backView.layer.borderColor = UIColor.systemBrown.cgColor
-        backView.layer.borderWidth = 2.0
+       
         
     }
     
